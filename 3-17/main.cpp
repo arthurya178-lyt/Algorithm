@@ -30,14 +30,14 @@ void time_count(int(*fun)(vector<int>&, int), const vector<double> data_size, ve
 	int v;
 
 	for (int i = 0; i < data_size.size(); i++) {
-		// ²£¥Í¸ê®Æ
+		// ç”¢ç”Ÿè³‡æ–™
 		generate_random_data(A, data_size[i]);
 		v = -1;
-		// ¶}©l­p®É
+		// é–‹å§‹è¨ˆæ™‚
 		start = chrono::high_resolution_clock::now();
 		fun(A, v);
 		end = chrono::high_resolution_clock::now();
-		// µ²§ô­p®É
+		// çµæŸè¨ˆæ™‚
 		chrono::duration<double> diff = end - start;
 		running_time.push_back(diff.count());
 	}
@@ -76,7 +76,7 @@ int main()
 	plt::named_plot("std_find", data_size, result4);
 	plt::title("Search Methods Comparison");
 	plt::legend();
-	plt::pause(1);//³Ì¦n¥[¤W¸Ó¥y¡A§_«h¦³®É­ÔÅã¥Ü¤£¤F¹Ï¹³¡A©ÎªÌ¹Ï¹³Åã¥Ü«ÜºC
+	plt::pause(1);//æœ€å¥½åŠ ä¸Šè©²å¥ï¼Œå¦å‰‡æœ‰æ™‚å€™é¡¯ç¤ºä¸äº†åœ–åƒï¼Œæˆ–è€…åœ–åƒé¡¯ç¤ºå¾ˆæ…¢
 	plt::show();
 
 }
