@@ -64,7 +64,7 @@ int linear_search(vector<int>& A, int v)
 	return -1;
 } // end of linear_search
 
-//======================�H�U�ϥ�STL���禡======================
+//======================¥H¤U¨Ï¥ÎSTLªº¨ç¦¡======================
 
 bool mypredicate(int i, int j)
 {
