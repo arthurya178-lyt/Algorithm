@@ -4,7 +4,6 @@
 #include <random>
 #include <cmath>
 #include <vector>
-#include "Toolbox.h"
 using namespace std;
 template<typename T>
 int partition(vector<T> &arr,int compare,const int front, const int last)
@@ -40,10 +39,10 @@ void randomizeQuickSort(vector<T> &arr, int front, int last)
 {
 	if (front < last )
 	{
-		int target = rand() % (last + 1) + front;
+		int target = (rand() % (last - front + 1)) + front;
 		int m = partition(arr, target, front, last);
-		quickSort(arr, front, m - 1);
-		quickSort(arr, m + 1, last);
+		randomizeQuickSort(arr, front, m - 1);
+		randomizeQuickSort(arr, m + 1, last);
 	}
 }
 
